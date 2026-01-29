@@ -1,0 +1,97 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Philosophers",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/philo",
+            "args": ["5", "800", "200", "200"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build philosophers",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "logging": {
+                "engineLogging": false
+            }
+        },
+        {
+            "name": "Debug with Meal Limit",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/philo",
+            "args": ["5", "800", "200", "200", "7"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build philosophers",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Debug Death Test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/philo",
+            "args": ["4", "310", "200", "100"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build philosophers",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Debug Single Philo",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/philo",
+            "args": ["1", "800", "200", "200"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build philosophers",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}

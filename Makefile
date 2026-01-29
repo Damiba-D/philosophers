@@ -6,7 +6,13 @@ RM			= rm -f
 
 # Source files
 SRCS		= philo.c \
-			  parsing.c
+			  parsing.c \
+			  print_utils.c \
+			  utils.c \
+			  utils2.c \
+			  cleanup.c \
+			  initializing.c \
+			  philo_actions.c \
 			  # Add more .c files here as you create them
 
 # Object files
