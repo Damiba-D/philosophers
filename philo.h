@@ -6,7 +6,7 @@
 /*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 22:32:17 by ddamiba           #+#    #+#             */
-/*   Updated: 2026/01/29 18:11:08 by daniel           ###   ########.fr       */
+/*   Updated: 2026/01/31 01:30:33 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,46 +23,45 @@
 
 # define MUT_ERR "Mutex creation error"
 
-typedef struct s_data t_data;
+typedef struct s_data	t_data;
 
 typedef struct s_philo
 {
-	int philo_id;
-	int meal_count;
-	bool eat_limit;
-	int t_lastmeal;
-	pthread_t thread;
-	pthread_mutex_t *l_fork;
-	pthread_mutex_t *r_fork;
-	t_data *mstr_link;
+	int				philo_id;
+	int				meal_count;
+	bool			eat_limit;
+	int				t_lastmeal;
+	pthread_t		thread;
+	pthread_mutex_t	*l_fork;
+	pthread_mutex_t	*r_fork;
+	t_data			*mstr_link;
 }	t_philo;
 
 typedef struct s_mutex
 {
-	pthread_mutex_t *fork_arr;
-	pthread_mutex_t death_lock;
-	pthread_mutex_t eat_lock;
-	pthread_mutex_t write_lock;
+	pthread_mutex_t	*fork_arr;
+	pthread_mutex_t	death_lock;
+	pthread_mutex_t	eat_lock;
+	pthread_mutex_t	write_lock;
 }	t_mutex;
 
 typedef struct s_rules
 {
-	int philo_count;
-	int t_die;
-	int t_eat;
-	int t_sleep;
-	int meal_limit;
-	int start_time;
-	int death_id;
+	int	philo_count;
+	int	t_die;
+	int	t_eat;
+	int	t_sleep;
+	int	meal_limit;
+	int	start_time;
+	int	death_id;
 }	t_rules;
 
 typedef struct s_data
 {
-	t_philo *philos;
+	t_philo	*philos;
 	t_mutex	mutexes;
-	t_rules rules;
+	t_rules	rules;
 }	t_data;
-
 
 int		ft_isdigit(int c);
 long	ft_atol(const char *str);

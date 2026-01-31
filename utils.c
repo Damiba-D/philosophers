@@ -6,19 +6,19 @@
 /*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 14:46:02 by daniel            #+#    #+#             */
-/*   Updated: 2026/01/29 18:06:23 by daniel           ###   ########.fr       */
+/*   Updated: 2026/01/31 01:32:16 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int    get_time(void)
+int	get_time(void)
 {
-    struct timeval    tv;
+	struct timeval	tv;
 
-    if (gettimeofday(&tv, NULL) == -1)
-        return (-1);
-    return (tv.tv_sec * 1000 + tv.tv_usec / 1000);
+	if (gettimeofday(&tv, NULL) == -1)
+		return (-1);
+	return (tv.tv_sec * 1000 + tv.tv_usec / 1000);
 }
 
 bool	check_dead(t_data *master)

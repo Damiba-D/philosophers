@@ -6,7 +6,7 @@
 /*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 22:43:27 by ddamiba           #+#    #+#             */
-/*   Updated: 2026/01/29 18:36:57 by daniel           ###   ########.fr       */
+/*   Updated: 2026/01/31 01:28:30 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	start_simulation(t_data *master)
 {
 	int	i;
-	int j;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -41,8 +41,8 @@ void	start_simulation(t_data *master)
 
 int	main(int argc, char **argv)
 {
-	t_data *master;
-	//1-number_of_philosophers 2-time_to_die 3-time_to_eat 4-time_to_sleep 5-[number_of_times_each_philosopher_must_eat]
+	t_data	*master;
+
 	if (argc < 5 || argc > 6)
 		return (printf("Incorrect number of args\n"));
 	master = malloc(sizeof(t_data));

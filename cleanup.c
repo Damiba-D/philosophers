@@ -6,7 +6,7 @@
 /*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 02:47:02 by daniel            #+#    #+#             */
-/*   Updated: 2026/01/28 18:38:33 by daniel           ###   ########.fr       */
+/*   Updated: 2026/01/31 01:23:49 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ void	master_cleanup(t_data *master)
 	free(master->philos);
 	free(master);
 }
-

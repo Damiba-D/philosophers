@@ -6,7 +6,7 @@
 /*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 16:50:57 by ddamiba           #+#    #+#             */
-/*   Updated: 2026/01/28 19:56:02 by daniel           ###   ########.fr       */
+/*   Updated: 2026/01/31 01:27:08 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ long	ft_atol(const char *str)
 int	is_valid_int(char *str, int *res)
 {
 	int	i;
-	int lres;
+	int	lres;
 
 	i = 0;
 	if (str[i] == '\0' || (str[i] == '0' && !str[i + 1]))
@@ -71,7 +71,7 @@ int	is_valid_int(char *str, int *res)
 	return (1);
 }
 
-int data_parsing(t_data *master, char **argv)
+int	data_parsing(t_data *master, char **argv)
 {
 	if (!is_valid_int(argv[1], &master->rules.philo_count))
 		return (ft_putendl_fd("Invalid philo count", 2), 0);

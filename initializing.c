@@ -6,7 +6,7 @@
 /*   By: daniel <daniel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 18:42:46 by daniel            #+#    #+#             */
-/*   Updated: 2026/01/29 18:26:17 by daniel           ###   ########.fr       */
+/*   Updated: 2026/01/31 01:26:34 by daniel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ int	init_fork(t_data *master)
 	return (1);
 }
 
-int init_mutex(t_data *master)
+int	init_mutex(t_data *master)
 {
-	master->mutexes.fork_arr = malloc (sizeof(pthread_mutex_t) * master->rules.philo_count);
+	master->mutexes.fork_arr = \
+malloc(sizeof(pthread_mutex_t) * master->rules.philo_count);
 	if (!master->mutexes.fork_arr)
 		return (0);
 	if (!init_fork(master))
@@ -59,9 +60,9 @@ int init_mutex(t_data *master)
 	return (1);
 }
 
-int init_philo(t_data *master)
+int	init_philo(t_data *master)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	master->philos = malloc(sizeof(t_philo) * master->rules.philo_count);
@@ -75,8 +76,8 @@ int init_philo(t_data *master)
 		master->philos[i].philo_id = i + 1;
 		master->philos[i].l_fork = &master->mutexes.fork_arr[i];
 		if (i == 0)
-			master->philos[i].r_fork = &master->mutexes.fork_arr\
-[master->rules.philo_count - 1];
+			master->philos[i].r_fork = \
+&master->mutexes.fork_arr[master->rules.philo_count - 1];
 		else
 			master->philos[i].r_fork = &master->mutexes.fork_arr[i - 1];
 		master->philos[i].mstr_link = master;
