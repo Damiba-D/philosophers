@@ -1,3 +1,5 @@
+# Philosophers
+
 *This project has been created as part of the 42 curriculum by ddamiba.*
 
 ## Description
@@ -125,9 +127,6 @@ All shared data (death status, meal counts, last meal time) is protected by mute
   - `man pthread_mutex_unlock` - Releasing mutex locks
   - `man gettimeofday` - Getting current time
   - `man usleep` - Microsecond sleep
-
-# Additional "Resources"
-- Help from other students, namely diomende
 
 ### AI Usage
 AI was used in this project for:
